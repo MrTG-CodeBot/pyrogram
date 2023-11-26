@@ -62,8 +62,6 @@ class FileStorage(SQLiteStorage):
 
         if version == 3:
             with self.conn:
-                self.conn.execute("DROP INDEX idx_peers_username;")
-                self.conn.execute("ALTER TABLE peers DROP COLUMN username")
                 self.conn.executescript(SCHEMA)
 
             version += 1
