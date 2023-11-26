@@ -96,7 +96,7 @@ def get_input_peer(peer_id: int, access_hash: int, peer_type: str):
 
 
 class SQLiteStorage(Storage):
-    VERSION = 3
+    VERSION = 4
     USERNAME_TTL = 8 * 60 * 60
 
     def __init__(self, name: str):
